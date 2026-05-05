@@ -16,8 +16,8 @@ public class SpawnManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SpawnEnemy();
-        SpawnPowerup();
+        InvokeRepeating("SpawnRandomEnemy", StartDelay, enemySpawnTime);
+        InvokeRepeating("SpawnPowerup", StartDelay, powerupSpawnTime);
     }
 
     // Update is called once per frame
